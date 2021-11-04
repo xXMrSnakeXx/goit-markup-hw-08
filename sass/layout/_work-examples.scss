@@ -1,0 +1,41 @@
+.work-examples{
+    @media screen and (min-width:1200px) {
+        display: block;
+        
+    }
+    display: none;
+    padding-top: 0;
+}
+.work-examples__main-title{
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.work-examples-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.work-examples-list__item{
+    flex-basis: calc((100% - (2 * 30px)) / 3);
+    margin-left: 30px;
+    &:nth-child( 1 ){
+        margin-left: 0;
+    }
+}
+.work-examples-list__thumb{
+    position: relative;
+}
+.work-examples-list__heading{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(47, 48, 58, 0.8);
+}
+.work-examples-list__text{
+    padding-top: 27px;
+    padding-bottom: 27px;
+
+    @include fonts(700, 14px, 16px);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--secondary-text-color);
+}

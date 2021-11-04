@@ -1,0 +1,153 @@
+.backdrop{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.2);
+    top: 0;
+    @include flex-centred();
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1), transform 250ms cubic-bezier(0.4, 0, 0.2, 1), rotate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+.backdrop.is-hidden .modal{
+    transform: scale(0) rotate(360deg);
+}
+.modal{ 
+    @media screen and (max-width:476px) {
+        width: 95vw;
+        min-height: 609px;
+    }
+    @media screen and (min-width:480px) and (max-width:1199px) {
+        width: 450px;
+        min-height: 609px;
+    }
+    padding: 40px;
+    position: relative;
+    width: 528px;
+    min-height: 581px;
+    background-color: var(--secondary-text-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    transform: scale(1) rotate(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), rotate 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal__close-btn{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 8px;
+    top: 8px;
+    @include flex-centred();
+    background: var(--secondary-text-color);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.modal__icon{
+    width: 18px;
+    height: 18px;
+    fill: var(--modal-icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal__close-btn:hover &, .modal__close-btn:focus &{
+         fill: var(--accent-color)
+    }
+}
+.modal__title{
+    @media screen and (min-width:1200px) {
+         @include fonts(700, 20px, 23px);
+    }
+    margin-bottom: 12px;
+    @include fonts(700, 20px, 30px);
+    text-align: center;
+    color: var(--primary-title-color);
+}
+.modal__field{
+    display: block;
+    margin-bottom: 10px;
+}
+.modal__label{
+    display: block;
+    margin-bottom: 4px;
+    @include fonts(400, 12px, 14px, 0.01em);
+    color: var(--primary-text-color);
+}
+.modal__input-wrap{
+    display: block;
+    position: relative;
+}
+.modal__input{
+    padding-left: 42px;
+    padding-right: 15px;
+    width: 100%;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        &:focus{
+            border-color: var(--accent-color);
+        }
+}
+.modal__text-field{
+    display: block;
+    margin-bottom: 20px;
+}
+.modal__text-input{
+    padding: 12px 16px;
+    width: 100%;
+    height: 120px;
+    resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    &:focus{
+        border-color: var(--accent-color);
+    }
+}
+.modal__input-icon{
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal__input:focus + &{
+        fill: var(--accent-color);
+    }
+}
+.modal__check-text{
+    @media screen and (min-width:1200px) {
+        @include fonts(400, 14px, 24px);
+    }
+    @include fonts(400, 12px, 14px);
+    color: var(--primary-text-color);
+    @include flex-centred();
+    cursor: pointer;
+}
+.modal__check-text span{
+    width: 16px;
+    height: 15px;
+    border: 2px solid var(--primary-title-color);
+    border-radius: 2px;
+    margin-right: 7px;
+    @include flex-centred();
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    .modal__checkbox:checked + &{
+        background-color: var(--accent-color);
+        border: 1px solid var(--accent-color)
+    }
+}
+
+.modal__check-link{
+    margin-left: 3px;
+    color: var(--accent-color);
+    outline: none;
+}
+.modal__button{
+    margin-top: 30px;
+}
