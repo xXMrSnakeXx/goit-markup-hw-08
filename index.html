@@ -210,11 +210,17 @@
           <ul class="work-examples-list list">
             <li class="work-examples-list__item">
               <div class="work-examples-list__thumb">
-                <img
-                  src="./images/01.jpg"
-                  width="370"
-                  alt="Разработка приложений"
-                />
+                <picture>
+                  <source
+                    srcset="./images/01.jpg 1x, ./images/01-2x.jpg 2x"
+                    media="(min-width:1200px )"
+                  />
+                  <img
+                    src="./images/01.jpg"
+                    width="370"
+                    alt="Разработка приложений"
+                  />
+                </picture>
                 <div class="work-examples-list__heading">
                   <h2 class="work-examples-list__text">
                     Десктопные приложения
@@ -224,11 +230,17 @@
             </li>
             <li class="work-examples-list__item">
               <div class="work-examples-list__thumb">
-                <img
-                  src="./images/02.jpg"
-                  width="370"
-                  alt="Разработка мобильных приложений"
-                />
+                <picture>
+                  <source
+                    srcset="./images/02.jpg 1x, ./images/02-2x.jpg 2x"
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/02.jpg"
+                    width="370"
+                    alt="Разработка мобильных приложений"
+                  />
+                </picture>
                 <div class="work-examples-list__heading">
                   <h2 class="work-examples-list__text">Мобильные приложения</h2>
                 </div>
@@ -236,11 +248,17 @@
             </li>
             <li class="work-examples-list__item">
               <div class="work-examples-list__thumb">
-                <img
-                  src="./images/03.jpg"
-                  width="370"
-                  alt="Разработка планшетных приложений"
-                />
+                <picture>
+                  <source
+                    srcset="./images/03.jpg 1x, ./images/03-2x.jpg 2x"
+                    media="(min-width:1200px )"
+                  />
+                  <img
+                    src="./images/03.jpg"
+                    width="370"
+                    alt="Разработка планшетных приложений"
+                  />
+                </picture>
                 <div class="work-examples-list__heading">
                   <h2 class="work-examples-list__text">Дизайнерские решения</h2>
                 </div>
@@ -255,19 +273,35 @@
           <ul class="our-team-list list">
             <li class="our-team-list__item">
               <div class="our-team-list__thumb">
-                <img
-                  srcset="
-                    ./images/igor/igor.jpg          1x,
-                    ./images/igor/igor2x.jpg        2x,
-                    ./images/igor/igor-mobile.jpg   1x,
-                    ./images/igor/igor-mobile2x.jpg 2x,
-                    ./images/igor/igor-tablet.jpg   1x,
-                    ./images/igor/igor-tablet2x.jpg 2x
-                  "
-                  src="./images/igor/igor-mobile.jpg"
-                  alt="Игорь Демьяненко"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/igor/igor.jpg   1x,
+                      ./images/igor/igor2x.jpg 2x
+                    "
+                    media="(min-width:1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/igor/igor-tablet.jpg   1x,
+                      ./images/igor/igor-tablet2x.jpg 2x
+                    "
+                    media="(min-width:768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/igor/igor-mobile.jpg   1x,
+                      ./images/igor/igor-mobile2x.jpg 2x
+                    "
+                    media="(max-width:767px)"
+                  />
+
+                  <img
+                    src="./images/igor/igor-mobile.jpg"
+                    alt="Игорь Демьяненко"
+                    width="270"
+                  />
+                </picture>
               </div>
               <div class="our-team-content">
                 <h3 class="our-team-content__name">Игорь Демьяненко</h3>
@@ -314,19 +348,34 @@
             </li>
             <li class="our-team-list__item">
               <div class="our-team-list__thumb">
-                <img
-                  srcset="
-                    ./images/olya/olya.jpg          1x,
-                    ./images/olya/olya2x.jpg        2x,
-                    ./images/olya/olya-mobile.jpg   1x,
-                    ./images/olya/olya-mobile2x.jpg 2x,
-                    ./images/olya/olya-tablet.jpg   1x,
-                    ./images/olya/olya-tablet2x.jpg 2x
-                  "
-                  src="./images/olya/olya-mobile.jpg"
-                  alt="Ольга Репина"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/olya/olya.jpg   1x,
+                      ./images/olya/olya2x.jpg 2x
+                    "
+                    media="(min-width:1200px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/olya/olya-tablet.jpg   1x,
+                      ./images/olya/olya-tablet2x.jpg 2x
+                    "
+                    media="(min-width:768px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/olya/olya-mobile.jpg   1x,
+                      ./images/olya/olya-mobile2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/olya/olya-mobile.jpg"
+                    alt="Ольга Репина"
+                    width="270"
+                  />
+                </picture>
               </div>
               <div class="our-team-content">
                 <h3 class="our-team-content__name">Ольга Репина</h3>
@@ -373,19 +422,34 @@
             </li>
             <li class="our-team-list__item">
               <div class="our-team-list__thumb">
-                <img
-                  srcset="
-                    ./images/nikolai/nikolai.jpg          1x,
-                    ./images/nikolai/nikolai2x.jpg        2x,
-                    ./images/nikolai/nikolai-mobile.jpg   1x,
-                    ./images/nikolai/nikolai-mobile2x.jpg 2x,
-                    ./images/nikolai/nikolai-tablet.jpg   1x,
-                    ./images/nikolai/nikolai-tablet2x.jpg 2x
-                  "
-                  src="./images/nikolai/nikolai-mobile.jpg"
-                  alt="Николай Тарасов"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/nikolai/nikolai.jpg   1x,
+                      ./images/nikolai/nikolai2x.jpg 2x
+                    "
+                    media="(min-width:1200px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/nikolai/nikolai-tablet.jpg   1x,
+                      ./images/nikolai/nikolai-tablet2x.jpg 2x
+                    "
+                    media="(min-width:768px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/nikolai/nikolai-mobile.jpg   1x,
+                      ./images/nikolai/nikolai-mobile2x.jpg 2x
+                    "
+                    media="(max-width:767px )"
+                  />
+                  <img
+                    src="./images/nikolai/nikolai-mobile.jpg"
+                    alt="Николай Тарасов"
+                    width="270"
+                  />
+                </picture>
               </div>
               <div class="our-team-content">
                 <h3 class="our-team-content__name">Николай Тарасов</h3>
@@ -430,19 +494,34 @@
             </li>
             <li class="our-team-list__item">
               <div class="our-team-list__thumb">
-                <img
-                  srcset="
-                    ./images/misha/misha.jpg          1x,
-                    ./images/misha/misha2x.jpg        2x,
-                    ./images/misha/misha-mobile.jpg   1x,
-                    ./images/misha/misha-mobile2x.jpg 2x,
-                    ./images/misha/misha-tablet.jpg   1x,
-                    ./images/misha/misha-tablet2x.jpg 2x
-                  "
-                  src="./images/misha/misha-mobile.jpg"
-                  alt="Михаил Ермаков"
-                  width="270"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/misha/misha.jpg   1x,
+                      ./images/misha/misha2x.jpg 2x
+                    "
+                    media="(min-width:1200px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/misha/misha-tablet.jpg   1x,
+                      ./images/misha/misha-tablet2x.jpg 2x
+                    "
+                    media="(min-width:768px )"
+                  />
+                  <source
+                    srcset="
+                      ./images/misha/misha-mobile.jpg   1x,
+                      ./images/misha/misha-mobile2x.jpg 2x
+                    "
+                    media="(max-width: 767px)"
+                  />
+                  <img
+                    src="./images/misha/misha-mobile.jpg"
+                    alt="Михаил Ермаков"
+                    width="270"
+                  />
+                </picture>
               </div>
               <div class="our-team-content">
                 <h3 class="our-team-content__name">Михаил Ермаков</h3>

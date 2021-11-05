@@ -170,10 +170,16 @@
     }
 }
 .mobile-contacts__link_tel{
+    @media screen and (max-width:479px) {
+        @include fonts(500, 27px, 32px, 0.02em);
+    }
      @include fonts(500, 34px, 40px, 0.02em);
      color: var(--accent-color);
 }
 .mobile-contacts__link_email{
+    @media screen and (max-width:479px) {
+        @include fonts(500, 22px, 26px, 0.02em);
+    }
      @include fonts(500, 24px, 28px, 0.02em);
      color: var(--primary-text-color);
 }
@@ -197,6 +203,9 @@
     }
 }
 .mobile-soc-block__link{
+    @media screen and (max-width:479px) {
+        @include fonts(500, 14px, 17px, 0.02em);
+    }
     @include fonts(500, 18px, 22px, 0.02em);
     color: var(--accent-color);
 }

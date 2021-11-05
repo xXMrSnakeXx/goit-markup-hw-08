@@ -124,7 +124,7 @@
     @media screen and (min-width:1200px) {
         @include fonts(400, 14px, 24px);
     }
-    @include fonts(400, 12px, 14px);
+    @include fonts(400, 11px, 14px);
     color: var(--primary-text-color);
     @include flex-centred();
     cursor: pointer;
